@@ -38,8 +38,8 @@ public class Proxy extends HttpServlet {
         java.util.Properties pro = new java.util.Properties();
         //InputStream inputStream = this.getClass().getResourceAsStream("/resources/host.properties");
         //pro.load(inputStream);
-        pro.load(new FileInputStream(this.getClass().getResource("/host.properties").getFile()));
-
+//        pro.load(new FileInputStream(this.getClass().getResource("/host.properties").getFile()));
+        pro.put("host", "http://43.142.108.162");
         String host = pro.getProperty("host");
 
         String uri = request.getRequestURI();
